@@ -36,11 +36,13 @@ Modern K-12 schools, district boards, and universities face severe operational f
 
 ## 🎬 Official Product Video & Demo
 
-The official product presentation and interactive video showcase is available in high definition inside the application (`CampusOs.mp4`).
+The official product presentation (`CampusOs.mp4`) is bundled directly inside the application interface.
 
-https://github.com/user-attachments/assets/CampusOs.mp4
+<div align="center">
+  <img src="public/images/cartoon_school_poster.png" alt="CampusOS Problem vs Solution Showcase" width="100%" style="border-radius: 16px; border: 1px solid #334155;" />
+</div>
 
-> 💡 **Interactive Video Showcase:** Click **"Watch Video Tour (1:45 Min)"** directly inside the CampusOS web app to open the integrated HTML5 high-definition video modal.
+> 💡 **Interactive Video Showcase:** Click **"Watch Video Tour (1:45 Min)"** on the landing page or launch the app locally (`npm run dev`) to watch the integrated HTML5 1080p product presentation.
 
 ---
 
