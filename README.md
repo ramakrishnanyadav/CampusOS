@@ -36,13 +36,14 @@ Modern K-12 schools, district boards, and universities face severe operational f
 
 ## 🎬 Official Product Video & Demo
 
-The official product presentation (`CampusOs.mp4`) is bundled directly inside the application interface.
+https://raw.githubusercontent.com/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4
 
 <div align="center">
-  <img src="public/images/cartoon_school_poster.png" alt="CampusOS Problem vs Solution Showcase" width="100%" style="border-radius: 16px; border: 1px solid #334155;" />
+  <video src="https://raw.githubusercontent.com/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" controls width="100%" poster="public/images/cartoon_school_poster.png" style="border-radius: 16px; border: 1px solid #334155;">
+    <source src="https://raw.githubusercontent.com/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video player.
+  </video>
 </div>
-
-> 💡 **Interactive Video Showcase:** Click **"Watch Video Tour (1:45 Min)"** on the landing page or launch the app locally (`npm run dev`) to watch the integrated HTML5 1080p product presentation.
 
 ---
 
