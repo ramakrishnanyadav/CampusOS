@@ -14,6 +14,14 @@
 
 <br />
 
+<div align="center">
+  <a href="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4">
+    <img src="public/images/cartoon_school_poster.png" alt="CampusOS Operational Intelligence Showcase" width="100%" style="border-radius: 16px; border: 1px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);" />
+  </a>
+</div>
+
+<br />
+
 [🎬 Watch 1:45 Product Video](#-official-product-video--demo) • [⚡ Explore Architecture](#-system-architecture) • [🧪 Test Verification](#-verification--test-suite) • [🚀 Quick Start](#-quick-start-guide)
 
 </div>
@@ -30,13 +38,14 @@ Modern K-12 schools, district boards, and universities face severe operational f
 
 ## 🎬 Official Product Video & Demo
 
-▶️ **[Click to Play / Download Official 1:45 HD Video Showcase (CampusOs.mp4)](https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4)**
-
 <div align="center">
-  <video src="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" controls width="100%" style="border-radius: 16px; border: 1px solid #334155;">
-    <source src="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" type="video/mp4" />
-    Your browser does not support inline video. <a href="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4">Click to play CampusOs.mp4</a>.
-  </video>
+  <a href="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4">
+    <img src="public/images/cartoon_school_poster.png" alt="Play CampusOS Product Video Showcase (1:45 HD Video)" width="100%" style="border-radius: 16px; border: 1px solid #334155;" />
+  </a>
+  <br /><br />
+  <a href="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4">
+    <img src="https://img.shields.io/badge/▶️_Play_Official_Product_Video-CampusOs.mp4-7C3AED?style=for-the-badge&logo=playstation&logoColor=white" alt="Play Product Video" />
+  </a>
 </div>
 
 ---
