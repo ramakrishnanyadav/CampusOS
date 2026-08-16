@@ -229,36 +229,23 @@ export const ProductLandingHome: React.FC<ProductLandingHomeProps> = ({
           </div>
         </div>
 
-        {/* Right Column: Animated Video Thumbnail Box */}
+        {/* Right Column: Embedded Real CampusOS Product Video Player */}
         <div className="lg:col-span-5 relative z-10">
-          <div
-            onClick={() => {
-              setIsVideoModalOpen(true);
-              playThemeSound('click');
-            }}
-            className="w-full h-64 rounded-3xl overflow-hidden relative cursor-pointer group border-2 border-white/20 shadow-2xl bg-slate-900"
-          >
-            <img
-              src="/images/video_thumbnail.png"
-              alt="CampusOS Product Intro Video Thumbnail"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-
-            {/* Glowing Animated Play Overlay */}
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
-              <div className="w-16 h-16 rounded-full bg-white text-[#7C3AED] flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform relative">
-                <div className="absolute inset-0 rounded-full bg-white/40 animate-ping" />
-                <Play className="w-7 h-7 fill-[#7C3AED] ml-1 relative z-10" />
-              </div>
-            </div>
-
-            <div className="absolute bottom-3 left-3 right-3 px-3 py-2 bg-black/60 backdrop-blur-md rounded-xl text-xs text-white font-bold flex items-center justify-between border border-white/10">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>CampusOS System Overview</span>
-              </div>
-              <span className="text-amber-300 font-mono">1:45 Min</span>
-            </div>
+          <div className="w-full h-72 sm:h-80 rounded-3xl overflow-hidden relative border-2 border-white/20 shadow-2xl bg-black group">
+            <video
+              src="/CampusOs.mp4"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/images/cartoon_school_poster.png"
+              className="w-full h-full object-cover rounded-3xl"
+            >
+              <source src="/CampusOs.mp4" type="video/mp4" />
+              <source src="/images/CampusOs.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video player.
+            </video>
           </div>
         </div>
       </div>
