@@ -38,15 +38,9 @@ Modern K-12 schools, district boards, and universities face severe operational f
 
 ## 🎬 Official Product Video & Demo
 
-<div align="center">
-  <a href="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4">
-    <img src="public/images/cartoon_school_poster.png" alt="Play CampusOS Product Video Showcase (1:45 HD Video)" width="100%" style="border-radius: 16px; border: 1px solid #334155;" />
-  </a>
-  <br /><br />
-  <a href="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4">
-    <img src="https://img.shields.io/badge/▶️_Play_Official_Product_Video-CampusOs.mp4-7C3AED?style=for-the-badge&logo=playstation&logoColor=white" alt="Play Product Video" />
-  </a>
-</div>
+▶️ **[Click to Stream / Watch 1:45 HD Product Video (CampusOs.mp4)](https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4)**
+
+https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4
 
 ---
 
