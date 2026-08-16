@@ -1,0 +1,34 @@
+name: CampusOS CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run TypeScript Type Checker
+        run: npx tsc --noEmit
+
+      - name: Run Enterprise Unit & Integration Test Suites
+        run: npm test
+
+
+      - name: Build Production Bundle
+        run: npm run build

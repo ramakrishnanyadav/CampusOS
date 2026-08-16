@@ -1,0 +1,6 @@
+{
+  "name": "CampusOS — Operational Intelligence Platform",
+  "description": "AI-powered enterprise school management platform automating daily school operations, document processing, spatial attendance, and dynamic timetabling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

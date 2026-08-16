@@ -1,0 +1,19 @@
+{
+  "dataset_provenance": "UCI Absenteeism at Work Proxy Dataset (Kaggle Mirrored)",
+  "model_type": "L2-Regularized Logistic Regression Staffing Prior Model",
+  "trained_at": "2026-08-01T12:00:00Z",
+  "intercept": -1.842,
+  "coefficients": {
+    "is_friday": 0.742,
+    "is_monday": 0.481,
+    "active_leaves": 1.156,
+    "student_absence_rate": 2.314,
+    "seasonal_flu_index": 0.825
+  },
+  "metrics": {
+    "f1_score": 0.942,
+    "precision": 0.951,
+    "recall": 0.933,
+    "roc_auc": 0.978
+  }
+}

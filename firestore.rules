@@ -1,0 +1,73 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions for RBAC claims and tenant isolation
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    function hasRole(role) {
+      return isAuthenticated() && request.auth.token.role == role;
+    }
+    function hasAnyRole(roles) {
+      return isAuthenticated() && request.auth.token.role in roles;
+    }
+    function isTenantMember(orgId) {
+      return isAuthenticated() && request.auth.token.orgId == orgId;
+    }
+
+    match /orgs/{orgId} {
+      allow read: if isTenantMember(orgId);
+
+      // Infrastructure Rooms: Admin write, Tenant Authenticated read
+      match /rooms/{roomId} {
+        allow read: if isTenantMember(orgId);
+        allow write: if isTenantMember(orgId) && hasRole('ADMIN');
+      }
+
+      // Faculty Roster: Admin write, Tenant Authenticated read
+      match /faculty/{facultyId} {
+        allow read: if isTenantMember(orgId);
+        allow write: if isTenantMember(orgId) && hasRole('ADMIN');
+      }
+
+      // Timetable Slots: Admin write, Tenant Authenticated read
+      match /timetable_slots/{slotId} {
+        allow read: if isTenantMember(orgId);
+        allow write: if isTenantMember(orgId) && hasRole('ADMIN');
+      }
+
+      // Student Roster & Attendance: Staff and Admin access
+      match /students/{studentId} {
+        allow read, write: if isTenantMember(orgId) && hasAnyRole(['ADMIN', 'STAFF']);
+      }
+
+      // Document Records: Staff and Admin access
+      match /documents/{docId} {
+        allow read: if isTenantMember(orgId);
+        allow write: if isTenantMember(orgId) && hasAnyRole(['ADMIN', 'STAFF']);
+      }
+
+      // OCR Extracted Documents: Staff and Admin access
+      match /extracted_documents/{docId} {
+        allow read: if isTenantMember(orgId);
+        allow write: if isTenantMember(orgId) && hasAnyRole(['ADMIN', 'STAFF']);
+      }
+
+      // Teacher Leaves: Staff and Admin access
+      match /teacher_leaves/{leaveId} {
+        allow read, write: if isTenantMember(orgId) && hasAnyRole(['ADMIN', 'STAFF']);
+      }
+
+      // Staff Attendance: Staff and Admin access
+      match /staff_attendance/{id} {
+        allow read: if isTenantMember(orgId);
+        allow write: if isTenantMember(orgId) && hasAnyRole(['ADMIN', 'STAFF']);
+      }
+
+      // Audit Logs: Staff and Admin write/read
+      match /audit_logs/{logId} {
+        allow read, write: if isTenantMember(orgId) && hasAnyRole(['ADMIN', 'STAFF']);
+      }
+    }
+  }
+}

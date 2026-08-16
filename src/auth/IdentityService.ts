@@ -1,0 +1,98 @@
+import { UserIdentity } from '../identity/UserIdentity';
+
+export const PRESET_IDENTITIES: Record<string, UserIdentity> = {
+  SUPER_ADMIN: {
+    uid: 'uid-super-admin',
+    email: 'superadmin@gvis-global.org',
+    displayName: 'Dr. Alexander Vance (Global Super Admin)',
+    photoURL: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=256',
+    organizationId: 'org-central-high',
+    campusId: 'campus-main',
+    departmentId: 'dept-admin',
+    employeeId: 'EMP-001',
+    accountStatus: 'ACTIVE',
+    emailVerified: true,
+    lastLogin: new Date().toISOString(),
+    userType: 'SUPER_ADMIN',
+  },
+  PRINCIPAL: {
+    uid: 'uid-principal',
+    email: 'principal@centralhigh.edu',
+    displayName: 'Dr. Aris Vance (Campus Principal)',
+    photoURL: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256',
+    organizationId: 'org-central-high',
+    campusId: 'campus-main',
+    departmentId: 'dept-admin',
+    employeeId: 'EMP-101',
+    accountStatus: 'ACTIVE',
+    emailVerified: true,
+    lastLogin: new Date().toISOString(),
+    userType: 'PRINCIPAL',
+  },
+  HOD: {
+    uid: 'uid-hod',
+    email: 'hod.science@centralhigh.edu',
+    displayName: 'Prof. Alan Smith (HOD Science)',
+    photoURL: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=256',
+    organizationId: 'org-central-high',
+    campusId: 'campus-main',
+    departmentId: 'dept-sci',
+    employeeId: 'EMP-202',
+    accountStatus: 'ACTIVE',
+    emailVerified: true,
+    lastLogin: new Date().toISOString(),
+    userType: 'HOD',
+  },
+  TEACHER: {
+    uid: 'uid-teacher',
+    email: 'faculty@centralhigh.edu',
+    displayName: 'Prof. Elena Rostova (Faculty)',
+    photoURL: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=256',
+    organizationId: 'org-central-high',
+    campusId: 'campus-main',
+    departmentId: 'dept-math',
+    employeeId: 'EMP-208',
+    accountStatus: 'ACTIVE',
+    emailVerified: true,
+    lastLogin: new Date().toISOString(),
+    userType: 'TEACHER',
+  },
+  PARENT: {
+    uid: 'uid-parent',
+    email: 'parent@centralhigh.edu',
+    displayName: 'Rajesh Sharma (Parent)',
+    photoURL: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=256',
+    organizationId: 'org-central-high',
+    campusId: 'campus-main',
+    studentId: 'STU-1001',
+    accountStatus: 'ACTIVE',
+    emailVerified: true,
+    lastLogin: new Date().toISOString(),
+    userType: 'PARENT',
+  },
+  STUDENT: {
+    uid: 'uid-student',
+    email: 'student@centralhigh.edu',
+    displayName: 'Aarav Sharma (Student — Grade 10-A)',
+    photoURL: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=256',
+    organizationId: 'org-central-high',
+    campusId: 'campus-main',
+    departmentId: 'dept-sci',
+    studentId: 'STU-1001',
+    accountStatus: 'ACTIVE',
+    emailVerified: true,
+    lastLogin: new Date().toISOString(),
+    userType: 'STUDENT',
+  },
+};
+
+export class IdentityService {
+  public static async resolveIdentity(uid: string, fallbackType: UserIdentity['userType'] = 'PRINCIPAL'): Promise<UserIdentity> {
+    const identity = PRESET_IDENTITIES[fallbackType] || PRESET_IDENTITIES.PRINCIPAL!;
+    return {
+      ...identity,
+      uid,
+      lastLogin: new Date().toISOString(),
+    };
+  }
+}
