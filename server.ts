@@ -424,7 +424,7 @@ app.post("/api/auth/elevate", async (req: any, res: any) => {
     }
   }
 
-  const activeAdminPassword = ADMIN_PASSWORD || "CampusOS#2026Secure";
+  const activeAdminPass = ADMIN_PASSWORD || crypto.randomBytes(32).toString("hex");
   const { password } = req.body;
 
   // Verify caller's authenticated orgId if token present; never trust req.body.orgId overrides
@@ -446,7 +446,7 @@ app.post("/api/auth/elevate", async (req: any, res: any) => {
   }
 
   const inputHash = crypto.createHash("sha256").update(password || "").digest("hex");
-  const expectedHash = crypto.createHash("sha256").update(activeAdminPassword).digest("hex");
+  const expectedHash = crypto.createHash("sha256").update(activeAdminPass).digest("hex");
 
   if (crypto.timingSafeEqual(Buffer.from(inputHash), Buffer.from(expectedHash))) {
     perIpLockoutMap.delete(clientIp);

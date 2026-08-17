@@ -19,8 +19,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Dependencies & Resolve Native Bindings
-        run: npm install
+      - name: Install Locked Dependencies Safely
+        run: npm ci --ignore-scripts
+
+      - name: Rebuild Platform Native Dependencies
+        run: npm rebuild
 
       - name: Run TypeScript Type Checker
         run: npx tsc --noEmit
