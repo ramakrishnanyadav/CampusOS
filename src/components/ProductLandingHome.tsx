@@ -233,17 +233,18 @@ export const ProductLandingHome: React.FC<ProductLandingHomeProps> = ({
         <div className="lg:col-span-5 relative z-10">
           <div className="w-full h-72 sm:h-80 rounded-3xl overflow-hidden relative border-2 border-white/20 shadow-2xl bg-black group">
             <video
-              src="/CampusOs.mp4"
               controls
               autoPlay
               muted
               loop
               playsInline
+              preload="metadata"
               poster="/images/cartoon_school_poster.png"
               className="w-full h-full object-cover rounded-3xl"
             >
               <source src="/CampusOs.mp4" type="video/mp4" />
-              <source src="/images/CampusOs.mp4" type="video/mp4" />
+              <source src="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" type="video/mp4" />
+              <source src="https://raw.githubusercontent.com/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" type="video/mp4" />
               Your browser does not support HTML5 video player.
             </video>
           </div>

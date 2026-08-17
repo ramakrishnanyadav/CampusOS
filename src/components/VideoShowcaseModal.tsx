@@ -49,14 +49,15 @@ export const VideoShowcaseModal: React.FC<VideoShowcaseModalProps> = ({ isOpen, 
         {/* Video Player Container */}
         <div className="relative bg-black flex-1 flex items-center justify-center min-h-[350px] sm:min-h-[460px] overflow-hidden p-2">
           <video
-            src="/CampusOs.mp4"
             controls
             autoPlay
             playsInline
+            preload="metadata"
             className="w-full h-full max-h-[70vh] object-contain rounded-2xl shadow-2xl"
           >
             <source src="/CampusOs.mp4" type="video/mp4" />
-            <source src="/images/CampusOs.mp4" type="video/mp4" />
+            <source src="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" type="video/mp4" />
+            <source src="https://raw.githubusercontent.com/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" type="video/mp4" />
             Your browser does not support playing MP4 videos.
           </video>
         </div>
