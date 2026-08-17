@@ -17,7 +17,10 @@ export class DeviceManager {
     if (typeof localStorage === 'undefined' || typeof navigator === 'undefined') return 'dev_test_environment';
     let fp = localStorage.getItem(LOCAL_DEVICE_KEY);
     if (!fp) {
-      fp = `dev_${(navigator.platform || 'node').replace(/\s+/g, '')}_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
+      const seed = typeof crypto !== 'undefined' && crypto.getRandomValues
+        ? crypto.getRandomValues(new Uint32Array(1))[0]
+        : Date.now();
+      fp = `dev_${(navigator.platform || 'node').replace(/\s+/g, '')}_${Date.now()}_${seed}`;
       localStorage.setItem(LOCAL_DEVICE_KEY, fp);
     }
     return fp;
@@ -75,4 +78,3 @@ export class DeviceManager {
     return record;
   }
 }
-

@@ -9,8 +9,11 @@ export interface MFASession {
 
 export class MFAService {
   public static generateChallenge(method: MFAMethod): MFASession {
+    const randomSeed = typeof crypto !== 'undefined' && crypto.getRandomValues
+      ? crypto.getRandomValues(new Uint32Array(1))[0]
+      : Date.now();
     return {
-      challengeId: `mfa_${Date.now()}_${Math.floor(Math.random() * 10000)}`,
+      challengeId: `mfa_${Date.now()}_${randomSeed}`,
       method,
       expiresAt: Date.now() + 300000, // 5 minutes validity
       expectedCode: '123456', // Demo default 6-digit MFA OTP code
