@@ -1,6 +1,6 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import { X, Shield, Sparkles, Film } from 'lucide-react';
+import { X, Shield, Sparkles, Film, Play, ExternalLink } from 'lucide-react';
 import { useTheme } from '../theme/ThemeContext';
 
 interface VideoShowcaseModalProps {
@@ -46,19 +46,47 @@ export const VideoShowcaseModal: React.FC<VideoShowcaseModalProps> = ({ isOpen, 
           </button>
         </div>
 
-        {/* Video Player Container */}
-        <div className="relative bg-black flex-1 flex items-center justify-center min-h-[350px] sm:min-h-[460px] overflow-hidden p-2">
-          <video
-            controls
-            autoPlay
-            playsInline
-            preload="metadata"
-            className="w-full h-full max-h-[70vh] object-contain rounded-2xl shadow-2xl"
-          >
-            <source src="https://github.com/ramakrishnanyadav/CampusOS/releases/download/v1.0.0/CampusOs.mp4" type="video/mp4" />
-            <source src="/CampusOs.mp4" type="video/mp4" />
-            Your browser does not support playing MP4 videos.
-          </video>
+        {/* Video Player & Poster Showcase Container */}
+        <div className="relative bg-slate-950 flex-1 flex flex-col items-center justify-center min-h-[360px] sm:min-h-[460px] overflow-hidden p-4 sm:p-6 text-center">
+          <div className="relative max-w-4xl w-full rounded-3xl overflow-hidden border border-slate-800 shadow-2xl group bg-slate-900">
+            <img
+              src="/images/cartoon_school_poster.png"
+              alt="CampusOS Operational Intelligence Showcase"
+              className="w-full h-auto max-h-[58vh] object-cover rounded-3xl brightness-[0.75] group-hover:scale-105 transition-transform duration-700"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent flex flex-col items-center justify-center p-6 space-y-5">
+              <a
+                href="https://github.com/ramakrishnanyadav/CampusOS/releases/download/v1.0.0/CampusOs.mp4"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => playThemeSound('success')}
+                className="w-20 h-20 sm:w-24 sm:h-24 bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-full flex items-center justify-center shadow-2xl shadow-amber-400/50 hover:scale-110 active:scale-95 transition-all duration-300 group/btn"
+              >
+                <Play className="w-10 h-10 sm:w-12 sm:h-12 text-slate-950 fill-slate-950 ml-1.5 group-hover/btn:scale-110 transition-transform" />
+              </a>
+
+              <div className="space-y-1.5 max-w-lg">
+                <h4 className="text-xl sm:text-3xl font-black text-white tracking-tight">
+                  Click to Watch 1:45 HD Video Tour
+                </h4>
+                <p className="text-xs sm:text-sm text-purple-200 font-medium">
+                  Plays official HD video presentation with audio (CampusOs.mp4)
+                </p>
+              </div>
+
+              <a
+                href="https://github.com/ramakrishnanyadav/CampusOS/releases/download/v1.0.0/CampusOs.mp4"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => playThemeSound('success')}
+                className="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-extrabold text-xs sm:text-sm rounded-2xl shadow-xl shadow-purple-600/30 transition-all flex items-center gap-2 active:scale-95"
+              >
+                <span>▶️ Launch Fullscreen Video Player</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Status Rail */}
