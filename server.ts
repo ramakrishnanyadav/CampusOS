@@ -1734,16 +1734,19 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`🚀 CampusOS Platform running on http://0.0.0.0:${PORT}`);
-    if (GROQ_KEY) {
-      console.log("⚡ GROQ_API_KEY detected! AI Engine running with Groq Llama-3.3-70b-versatile.");
-    } else if (process.env.GEMINI_API_KEY) {
-      console.log("✅ GEMINI_API_KEY detected. AI Engine running with Gemini.");
-    } else {
-      console.warn("⚠️ WARNING: No AI API key set. Engine running with sample placeholders.");
-    }
-  });
+  if (!process.env.VERCEL && process.env.NODE_ENV !== "test") {
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`🚀 CampusOS Platform running on http://0.0.0.0:${PORT}`);
+      if (GROQ_KEY) {
+        console.log("⚡ GROQ_API_KEY detected! AI Engine running with Groq Llama-3.3-70b-versatile.");
+      } else if (process.env.GEMINI_API_KEY) {
+        console.log("✅ GEMINI_API_KEY detected. AI Engine running with Gemini.");
+      } else {
+        console.warn("⚠️ WARNING: No AI API key set. Engine running with sample placeholders.");
+      }
+    });
+  }
 }
 
 startServer();
+export default app;
