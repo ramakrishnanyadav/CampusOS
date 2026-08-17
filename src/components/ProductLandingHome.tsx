@@ -233,7 +233,7 @@ export const ProductLandingHome: React.FC<ProductLandingHomeProps> = ({
         <div className="lg:col-span-5 relative z-10">
           <div className="w-full h-72 sm:h-80 rounded-3xl overflow-hidden relative border-2 border-white/20 shadow-2xl bg-black group">
             <iframe
-              src="https://player.vimeo.com/video/1219009817?title=0&byline=0&portrait=0"
+              src="https://player.vimeo.com/video/1219009817?h=1c2eb3ae09&title=0&byline=0&portrait=0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
               className="w-full h-full border-0 rounded-3xl"

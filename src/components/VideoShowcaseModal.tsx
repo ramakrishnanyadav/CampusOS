@@ -49,7 +49,7 @@ export const VideoShowcaseModal: React.FC<VideoShowcaseModalProps> = ({ isOpen, 
         {/* Vimeo Inline Video Player Container */}
         <div className="relative bg-black flex-1 flex items-center justify-center min-h-[360px] sm:min-h-[520px] overflow-hidden p-0">
           <iframe
-            src="https://player.vimeo.com/video/1219009817?autoplay=1&title=0&byline=0&portrait=0"
+            src="https://player.vimeo.com/video/1219009817?h=1c2eb3ae09&autoplay=1&title=0&byline=0&portrait=0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
             className="w-full h-full min-h-[380px] sm:min-h-[520px] border-0"
