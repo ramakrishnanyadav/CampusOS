@@ -229,12 +229,12 @@ export const ProductLandingHome: React.FC<ProductLandingHomeProps> = ({
           </div>
         </div>
 
-        {/* Right Column: Embedded Real CampusOS Vimeo Video Player */}
+        {/* Right Column: Embedded Real CampusOS YouTube Video Player */}
         <div className="relative z-10 w-full">
           <div className="w-full h-80 sm:h-96 rounded-3xl overflow-hidden relative border-2 border-white/20 shadow-2xl bg-black group">
             <iframe
-              src="https://player.vimeo.com/video/1219009817?h=1c2eb3ae09&title=0&byline=0&portrait=0"
-              allow="autoplay; fullscreen; picture-in-picture"
+              src="https://www.youtube.com/embed/UpVeD2mUs_E?rel=0&modestbranding=1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full border-0 rounded-3xl"
               title="CampusOS Official Video Showcase"

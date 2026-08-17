@@ -46,11 +46,11 @@ export const VideoShowcaseModal: React.FC<VideoShowcaseModalProps> = ({ isOpen, 
           </button>
         </div>
 
-        {/* Vimeo Inline Video Player Container */}
+        {/* YouTube Inline Video Player Container */}
         <div className="relative bg-black flex-1 flex items-center justify-center min-h-[360px] sm:min-h-[520px] overflow-hidden p-0">
           <iframe
-            src="https://player.vimeo.com/video/1219009817?h=1c2eb3ae09&autoplay=1&title=0&byline=0&portrait=0"
-            allow="autoplay; fullscreen; picture-in-picture"
+            src="https://www.youtube.com/embed/UpVeD2mUs_E?autoplay=1&rel=0&modestbranding=1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-full h-full min-h-[380px] sm:min-h-[520px] border-0"
             title="CampusOS Product Overview & AI Demonstration"
@@ -65,12 +65,12 @@ export const VideoShowcaseModal: React.FC<VideoShowcaseModalProps> = ({ isOpen, 
           </div>
 
           <a
-            href="https://vimeo.com/1219009817"
+            href="https://youtu.be/UpVeD2mUs_E"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-extrabold text-white text-xs bg-purple-600 hover:bg-purple-500 px-4 py-1.5 rounded-full border border-purple-400/30 transition-all flex items-center gap-1.5 shadow-md"
+            className="font-extrabold text-white text-xs bg-red-600 hover:bg-red-500 px-4 py-1.5 rounded-full border border-red-400/30 transition-all flex items-center gap-1.5 shadow-md"
           >
-            <span>Open on Vimeo</span>
+            <span>Watch on YouTube</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>

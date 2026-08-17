@@ -15,8 +15,12 @@
 <br />
 
 <div align="center">
-  <a href="https://vimeo.com/1219009817">
+  <a href="https://youtu.be/UpVeD2mUs_E">
     <img src="public/images/cartoon_school_poster.png" alt="CampusOS Operational Intelligence Showcase" width="100%" style="border-radius: 16px; border: 1px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);" />
+  </a>
+  <br /><br />
+  <a href="https://youtu.be/UpVeD2mUs_E">
+    <img src="https://img.shields.io/badge/▶️_Play_Official_Product_Video-YouTube_HD_Showcase-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Play Video on YouTube" />
   </a>
 </div>
 
@@ -38,9 +42,9 @@ Modern K-12 schools, district boards, and universities face severe operational f
 
 ## 🎬 Official Product Video & Demo
 
-▶️ **[Click to Watch Official 1:45 HD Product Video Showcase on Vimeo](https://vimeo.com/1219009817)**
+▶️ **[Click to Watch Official 1:45 HD Product Video Showcase on YouTube](https://youtu.be/UpVeD2mUs_E)**
 
-https://vimeo.com/1219009817
+https://youtu.be/UpVeD2mUs_E
 
 ---
 
