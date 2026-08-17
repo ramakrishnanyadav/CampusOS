@@ -229,23 +229,16 @@ export const ProductLandingHome: React.FC<ProductLandingHomeProps> = ({
           </div>
         </div>
 
-        {/* Right Column: Embedded Real CampusOS Product Video Player */}
+        {/* Right Column: Embedded Real CampusOS Vimeo Video Player */}
         <div className="lg:col-span-5 relative z-10">
           <div className="w-full h-72 sm:h-80 rounded-3xl overflow-hidden relative border-2 border-white/20 shadow-2xl bg-black group">
-            <video
-              controls
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster="/images/cartoon_school_poster.png"
-              className="w-full h-full object-cover rounded-3xl"
-            >
-              <source src="https://github.com/ramakrishnanyadav/CampusOS/releases/download/v1.0.0/CampusOs.mp4" type="video/mp4" />
-              <source src="/CampusOs.mp4" type="video/mp4" />
-              Your browser does not support HTML5 video player.
-            </video>
+            <iframe
+              src="https://player.vimeo.com/video/1219009817?title=0&byline=0&portrait=0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full border-0 rounded-3xl"
+              title="CampusOS Official Video Showcase"
+            />
           </div>
         </div>
       </div>
