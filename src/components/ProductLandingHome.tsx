@@ -242,9 +242,8 @@ export const ProductLandingHome: React.FC<ProductLandingHomeProps> = ({
               poster="/images/cartoon_school_poster.png"
               className="w-full h-full object-cover rounded-3xl"
             >
+              <source src="https://github.com/ramakrishnanyadav/CampusOS/releases/download/v1.0.0/CampusOs.mp4" type="video/mp4" />
               <source src="/CampusOs.mp4" type="video/mp4" />
-              <source src="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" type="video/mp4" />
-              <source src="https://raw.githubusercontent.com/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" type="video/mp4" />
               Your browser does not support HTML5 video player.
             </video>
           </div>

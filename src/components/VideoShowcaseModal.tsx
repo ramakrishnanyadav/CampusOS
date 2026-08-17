@@ -55,9 +55,8 @@ export const VideoShowcaseModal: React.FC<VideoShowcaseModalProps> = ({ isOpen, 
             preload="metadata"
             className="w-full h-full max-h-[70vh] object-contain rounded-2xl shadow-2xl"
           >
+            <source src="https://github.com/ramakrishnanyadav/CampusOS/releases/download/v1.0.0/CampusOs.mp4" type="video/mp4" />
             <source src="/CampusOs.mp4" type="video/mp4" />
-            <source src="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" type="video/mp4" />
-            <source src="https://raw.githubusercontent.com/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4" type="video/mp4" />
             Your browser does not support playing MP4 videos.
           </video>
         </div>

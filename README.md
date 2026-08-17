@@ -15,7 +15,7 @@
 <br />
 
 <div align="center">
-  <a href="https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4">
+  <a href="https://github.com/ramakrishnanyadav/CampusOS/releases/download/v1.0.0/CampusOs.mp4">
     <img src="public/images/cartoon_school_poster.png" alt="CampusOS Operational Intelligence Showcase" width="100%" style="border-radius: 16px; border: 1px solid #334155; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);" />
   </a>
 </div>
@@ -38,9 +38,9 @@ Modern K-12 schools, district boards, and universities face severe operational f
 
 ## 🎬 Official Product Video & Demo
 
-▶️ **[Click to Stream / Watch 1:45 HD Product Video (CampusOs.mp4)](https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4)**
+▶️ **[Click to Stream / Watch 1:45 HD Product Video (CampusOs.mp4)](https://github.com/ramakrishnanyadav/CampusOS/releases/download/v1.0.0/CampusOs.mp4)**
 
-https://media.githubusercontent.com/media/ramakrishnanyadav/CampusOS/main/public/CampusOs.mp4
+https://github.com/ramakrishnanyadav/CampusOS/releases/download/v1.0.0/CampusOs.mp4
 
 ---
 
