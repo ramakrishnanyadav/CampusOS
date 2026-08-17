@@ -20,7 +20,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onLoginSu
   const [authMode, setAuthMode] = useState<"login" | "register">("login");
   const [selectedRoleTab, setSelectedRoleTab] = useState<"ADMIN" | "STAFF" | "PARENT_STUDENT">("ADMIN");
   const [email, setEmail] = useState("admin@centralhigh.edu");
-  const [password, setPassword] = useState("admin123");
+  const [password, setPassword] = useState("CampusOS#2026Secure");
   const [name, setName] = useState("Dr. Aris Vance (Principal)");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -32,15 +32,15 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onLoginSu
     playThemeSound("click");
     if (targetRole === "ADMIN") {
       setEmail("admin@centralhigh.edu");
-      setPassword("admin123");
+      setPassword("CampusOS#2026Secure");
       setName("Dr. Aris Vance (Principal)");
     } else if (targetRole === "STAFF") {
       setEmail("faculty@centralhigh.edu");
-      setPassword("staff123");
+      setPassword("CampusOS#2026Secure");
       setName("Prof. Elena Rostova (Faculty)");
     } else {
       setEmail("student@centralhigh.edu");
-      setPassword("student123");
+      setPassword("CampusOS#2026Secure");
       setName("Aarav Sharma (Student / Parent)");
     }
   };
