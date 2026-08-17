@@ -62,15 +62,20 @@ export const VideoShowcaseModal: React.FC<VideoShowcaseModalProps> = ({ isOpen, 
         </div>
 
         {/* Bottom Status Rail */}
-        <div className="px-6 py-3.5 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-medium shrink-0">
+        <div className="px-6 py-3.5 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-medium shrink-0 flex-wrap gap-2">
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-purple-400 animate-pulse" />
             <span className="font-semibold text-white">CampusOS Intelligence System Demo</span>
           </div>
 
-          <span className="font-mono text-purple-300 text-[11px] bg-purple-950/60 px-3 py-1 rounded-full border border-purple-500/30">
-            CampusOs.mp4
-          </span>
+          <a
+            href="https://github.com/ramakrishnanyadav/CampusOS/releases/download/v1.0.0/CampusOs.mp4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-extrabold text-white text-xs bg-purple-600 hover:bg-purple-500 px-4 py-1.5 rounded-full border border-purple-400/30 transition-all flex items-center gap-1.5 shadow-md"
+          >
+            <span>▶️ Stream HD Video Directly</span>
+          </a>
         </div>
 
       </div>
