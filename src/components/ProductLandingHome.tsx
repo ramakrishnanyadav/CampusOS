@@ -191,9 +191,9 @@ export const ProductLandingHome: React.FC<ProductLandingHomeProps> = ({
       </div>
 
       {/* 2. Hero Action Card & Animated Video Thumbnail Box */}
-      <div className="bg-gradient-to-br from-[#6D28D9] via-[#7C3AED] to-[#4F46E5] text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-[#7C3AED]/25 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="bg-gradient-to-br from-[#6D28D9] via-[#7C3AED] to-[#4F46E5] text-white p-8 sm:p-12 rounded-3xl shadow-2xl shadow-[#7C3AED]/25 relative overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Left Column: Briefing Statement */}
-        <div className="lg:col-span-7 space-y-6 relative z-10">
+        <div className="space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 bg-white/15 px-3.5 py-1 rounded-full text-xs font-extrabold backdrop-blur-md">
             <ShieldCheck className="w-4 h-4 text-emerald-300" />
             <span>Autonomous Intelligence Nervous System</span>
@@ -230,8 +230,8 @@ export const ProductLandingHome: React.FC<ProductLandingHomeProps> = ({
         </div>
 
         {/* Right Column: Embedded Real CampusOS Vimeo Video Player */}
-        <div className="lg:col-span-5 relative z-10">
-          <div className="w-full h-72 sm:h-80 rounded-3xl overflow-hidden relative border-2 border-white/20 shadow-2xl bg-black group">
+        <div className="relative z-10 w-full">
+          <div className="w-full h-80 sm:h-96 rounded-3xl overflow-hidden relative border-2 border-white/20 shadow-2xl bg-black group">
             <iframe
               src="https://player.vimeo.com/video/1219009817?h=1c2eb3ae09&title=0&byline=0&portrait=0"
               allow="autoplay; fullscreen; picture-in-picture"
