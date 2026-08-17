@@ -532,7 +532,7 @@ async function uploadToCloudinary(imageBase64: string): Promise<string | null> {
     const timestamp = Math.floor(Date.now() / 1000);
     const folder = "campusos_documents";
     const strToSign = `folder=${folder}&timestamp=${timestamp}${CLOUDINARY_SECRET}`;
-    const signature = crypto.createHash("sha1").update(strToSign).digest("hex");
+    const signature = crypto.createHash("sha256").update(strToSign).digest("hex");
 
     const formData = new URLSearchParams();
     formData.append("file", imageBase64.startsWith("data:") ? imageBase64 : `data:image/png;base64,${imageBase64}`);
